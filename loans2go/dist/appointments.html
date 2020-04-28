@@ -13,7 +13,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
         <script>
             $(document).ready(function(){
-  $('[data-toggle="tooltip"]').tooltip(); 
+  $('[data-toggle="tooltip"]').tooltip();
 });
         </script>
     <style>
@@ -24,7 +24,7 @@
     0%{   color: rgb(81, 238, 41);    }
 }
     </style>
-    
+
     </head>
     <div class="modal fade" id="appointmentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
@@ -67,7 +67,7 @@
 	  </div>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <a class="navbar-brand" href="../index.html">Health Informatics</a><button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button
+            <a class="navbar-brand" href="../index.html"><img src="img/logo_horizontal_white.png" alt=""></a><button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button
             ><!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
                 <div class="input-group">
@@ -89,6 +89,25 @@
                 </li>
             </ul>
         </nav>
+        <div class="modal fade bd-example-modal-lg" id="reportModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Report</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div style="max-height: 500px; overflow-y: scroll;">
+                            <img src="img/medical-history.jpg" style="">
+                        </div>
+                        <a href="#" target="_blank" class="btn btn-primary" style="margin-top: 10px">Download</a>
+                        <!-- </form> -->
+                    </div>
+                </div>
+            </div>
+        </div>
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
@@ -98,12 +117,12 @@
                             <a class="nav-link" href="hospital.html"
                                 ><div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 My Dashboard</a>
-                           
+
                             <a class="nav-link" href="mypatients.html"
                                 ><div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 My Patients</a>
 
-                                
+
                                 <a class="nav-link" href="appointments.html"
                                 ><div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 My Appointments</a>
@@ -118,13 +137,60 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <img src="img/appointment.PNG" width="100%">
+                        <br>
+                        <div class="card mb-4">
+                            <div class="card-header"><i class="fas fa-table mr-1"></i>Upcoming Appointment</div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                        <tr>
+                                            <th>Date Of Visit</th>
+                                            <th>Time Of Visit</th>
+                                            <th>Doctor Name</th>
+                                            <th>Reason</th>
+                                            <th>Delivery</th>
+                                            <th>Medical History</th>
+                                        </tr>
+                                        </thead>
+
+                                        <tbody>
+                                        <tr>
+                                            <td>12/05/2020</td>
+                                            <td>4:00AM</td>
+                                            <td>Dr. John Doe</td>
+                                            <td>Fever symptom</td>
+                                            <td>D.Name.s.400</td>
+                                            <td data-toggle="modal" data-target="#reportModal"><i class="fas fa-notes-medical reportview"></i> <span style="color: dodgerblue; cursor: pointer">Yes</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>28/05/2020</td>
+                                            <td>1:30PM</td>
+                                            <td>Dr. Chris Gluf</td>
+                                            <td>Coughing, Fever and Shortness of breath</td>
+                                            <td></td>
+                                            <td><i class="fas fa-notes-medical reportview"></i> <span style="color: darkgrey;">None</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>31/05/2020</td>
+                                            <td>5:40PM</td>
+                                            <td>Dr. Max Doe</td>
+                                            <td>Itchy skin</td>
+                                            <td></td>
+                                            <td data-toggle="modal" data-target="#reportModal"><i class="fas fa-notes-medical reportview"></i> <span style="color: dodgerblue; cursor: pointer">Yes</span></td>
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Health Informatics 2020</div>
+                            <div class="text-muted">Copyright &copy;  Health Informatics 2020</div>
                             <div>
                                 <a href="#">Privacy Policy</a>
                                 &middot;
