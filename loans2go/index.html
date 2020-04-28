@@ -4,13 +4,13 @@
 	<title>Health Informatics</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+
 	<!-- Favicon -->
 	<link href="img/favicon.ico" rel="shortcut icon"/>
 
 	<!-- Google font -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
- 
+
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="css/font-awesome.min.css"/>
@@ -27,7 +27,7 @@
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 	<script>
-		$(document).ready(function() { 
+		$(document).ready(function() {
 		$("#register").click(function(){
 			alert("Confirmation email has been sent to you. Please confirm the email.")
 		});
@@ -44,8 +44,10 @@
 
 	<!-- Header Section -->
 	<header class="header-section">
-		<a href="index.html" style="font-size: 30px; color: white; margin-top: 3%; ">Health Informatics</a>
-		<nav class="header-nav" style="margin-top: -4%;">
+		<a href="index.html" class="site-logo">
+			<img src="img/logo_horizontal.png" alt="">
+		</a>
+		<nav class="header-nav">
 			<ul class="main-menu">
 				<li><a href="index.html" class="active">Home</a></li>
 				<li><a href="about-us.html">About Us</a></li>
@@ -55,13 +57,13 @@
 				<li><a href="contact.html">Contact</a></li>
 			</ul>
 			<div class="header-right">
-				<a href="#" class="hr-btn"><i class="flaticon-029-telephone-1"></i>Call us now! </a>
-				<div class="hr-btn hr-btn-2">+45 332 65767 42</div>
+				<a href="#" class="hr-btn" data-toggle="modal" data-target="#loginModal">LOG IN </a>
+				<div class="hr-btn hr-btn-2" data-toggle="modal" data-target="#registerModal">SIGN UP</div>
 			</div>
 		</nav>
-		
+
 	</header>
-	
+
 	<!-- Header Section end -->
 	<!-- Login and registration modal -->
 	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -140,12 +142,12 @@
 	<!-- Login and registration modal ends here -->
 	<!-- Hero Section end -->
 	<section class="hero-section">
-		
+
 		<div class="container">
-			<div class="row reg-login">
-				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">Login</button> &nbsp;&nbsp;
-				<button type="button" class="btn btn-info" data-toggle="modal" data-target="#registerModal">Register</button>
-			</div>
+<!--			<div class="row reg-login">-->
+<!--				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">Login</button> &nbsp;&nbsp;-->
+<!--				<button type="button" class="btn btn-info" data-toggle="modal" data-target="#registerModal">Register</button>-->
+<!--			</div>-->
 			<div class="row">
 				<div class="col-lg-6">
 					<div class="hs-text">
@@ -211,7 +213,7 @@
 						</div>
 					</div>
 				</div>
-				
+
 			</div>
 			<div class="text-center pt-3">
 				<span class="site-btn sb-big" data-toggle="modal" data-target="#registerModal">Register with us!</span>
@@ -355,7 +357,7 @@
 	<footer class="footer-section">
 		<div class="container">
 			<a href="index.html" class="footer-logo">
-				<img src="img/logo.png" alt="">
+				<img src="img/logo_horizontal_white.png" alt="">
 			</a>
 			<div class="row">
 				<div class="col-lg-3 col-sm-6">
@@ -416,7 +418,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		</div>
 	</footer>
 	<!-- Footer Section end -->
-	
+
 	<!--====== Javascripts & Jquery ======-->
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
